@@ -18,18 +18,29 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/github-markdown.css'); ?>">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css">
+    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/font-awesome-4.7.0/css/font-awesome.min.css'); ?>">
     <?php $this->header(); ?>
 </head>
 <body>
-<header id="site-header">
-    <nav id="site-nav" class="site-menu text-center">
-        <a <?php if ($this->is('index')): ?> class="current"<?php endif; ?>
-                href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
-        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-        <?php while ($pages->next()): ?>
-            <a <?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
-                    href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-        <?php endwhile; ?>
-    </nav>
-</header>
+<!--<a href="#"><i class="fa fa-step-backward" aria-hidden="true"></i></a>-->
+<!--<a href="#"><i class="fa fa-play fa-1.5x" aria-hidden="true"></i></a>-->
+<!--<a href="#"><i class="fa fa-pause" aria-hidden="true"></i> </a>-->
+<!--<a href="#"><i class="fa fa-step-forward" aria-hidden="true"></i></a>-->
+<!---->
+<!---->
+<div id="wrapper">
+    <header id="site-header">
+        <nav id="site-nav" class="site-menu text-center">
+            <a <?php if ($this->is('index')): ?> class="current"<?php endif; ?>
+                    href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+            <?php while ($pages->next()): ?>
+                <a <?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
+                        href="<?php $pages->permalink(); ?>"
+                        title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+            <?php endwhile; ?>
+        </nav>
+    </header>
+
     
