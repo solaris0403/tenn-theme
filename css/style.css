@@ -184,34 +184,6 @@ ul, ol, li {
     color: #999;
 }
 
-/*首页分页*/
-
-#page-navigator {
-    /*padding-bottom: -16px;*/
-}
-
-.page-navigator {
-    margin: 20px 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.page-navigator li {
-    display: inline-block;
-    color: #5f5f5f;
-}
-
-.page-navigator li a {
-    font-size: 14px;
-    padding: 0 20px;
-    color: rgba(0, 0, 0, .6);
-}
-
-.page-navigator li.current a {
-    color: #18779d;
-}
-
 /*侧边栏模块*/
 .widget {
     font-size: 14px;

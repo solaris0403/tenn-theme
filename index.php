@@ -52,9 +52,9 @@
             暂无文章
         <?php endif; ?>
     </ul>
-    <div id="page-navigator">
-        <?php $this->pageNav('←', '→'); ?>
-    </div>
+    <?php $this->pageNav('←', '→', 1, '...',
+        array('wrapTag' => 'ul', 'wrapClass' => 'uk-pagination uk-flex-center uk-margin', 'itemTag' => 'li', 'textTag' => 'span',
+            'currentClass' => 'uk-active', 'prevClass' => 'uk-pagination-previous', 'nextClass' => 'uk-pagination-next',)); ?>
 </div>
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>

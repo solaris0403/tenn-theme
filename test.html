@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol class="page-navigator">
+    <li class="current"><a href="http://localhost/typecho/index.php/page/1/">1</a></li>
+    <li><a href="http://localhost/typecho/index.php/page/2/">2</a></li>
+    <li class="next"><a href="http://localhost/typecho/index.php/page/2/">→</a></li>
+</ol>
+
+<!--    <ul class="uk-pagination uk-flex-center" uk-margin>-->
+<!--        <li><a href="#"><span uk-pagination-previous></span></a></li>-->
+<!--        <li><a href="#">1</a></li>-->
+<!--        <li class="uk-disabled"><span>...</span></li>-->
+<!--        <li><a href="#">5</a></li>-->
+<!--        <li><a href="#">6</a></li>-->
+<!--        <li class="uk-active"><span>7</span></li>-->
+<!--        <li><a href="#">8</a></li>-->
+<!--        <li><a href="#"><span uk-pagination-next></span></a></li>-->
+<!--    </ul>-->
+</body>
+</html>
+
+<?php $this->pageNav('«', '»', 1, '...', array('wrapTag' => 'ol', 'wrapClass' => 'page-navigator', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'current', 'prevClass' => 'prev', 'nextClass' => 'next',)); ?>
+<ol class="page-navigator">
+    <li class="current"><a href="http://example.com/page/1/">1</a></li>
+    <li><a href="http://example.com/page/2/">2</a></li>
+    <li><span>...</span></li>
+    <li><a href="http://example.com/page/5/">5</a></li>
+    <li class="next"><a href="http://example.com/page/2/">»</a></li>
+</ol>
+
+<?php $this->pageNav('«', '»', 1, '...', array('wrapTag' => 'ul', 'wrapClass' => 'uk-pagination uk-flex-center', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'uk-active', 'prevClass' => 'uk-pagination-previous', 'nextClass' => 'uk-pagination-next',)); ?>
+
